@@ -1,9 +1,10 @@
 #ifndef SORT_H
 #define SORT_H
 
-/*lib_functions*/
-#include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
+#include <stdbool.h>
+#include <stdio.h>
 
 /* Comparison direction macros for bitonic sort */
 #define UP 0
@@ -41,5 +42,12 @@ void quick_sort_hoare(int *array, size_t size);
 /* Additional prototypes for Quick Sort */
 size_t lomuto_partition(int *array, ssize_t low, ssize_t high, size_t size);
 void quicksort(int *array, ssize_t low, ssize_t high, size_t size);
+
+/* Additional prototypes for Cocktail Sort */
+void swap_nodes(listint_t **list, listint_t *a, listint_t *b);
+
+/* Additional prototypes for Merge Sort */
+void merge(int *array, size_t left, size_t mid, size_t right);
+void merge_sorts_recursive(int *array, size_t left, size_t right);
 
 #endif /* SORT_H */
