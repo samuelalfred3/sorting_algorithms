@@ -36,21 +36,18 @@ void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void quick_sort_hoare(int *array, size_t size);
+void quicksort_hoare(int *array, int low, int high);
+int hoare_partition(int *array, int low, int high);
 void radix_sort(int *array, size_t size);
 int getCantRep(int num);
-
-/* Additional prototypes for Quick Sort */
+void swap(int *array, int i, int j, int dir, size_t size);
+void bitonic_merge(int *array, int low, int count, int dir, size_t size);
+void bitonic_sort_recursive(int *array, int low, int count, int dir, size_t size);
 size_t lomuto_partition(int *array, ssize_t low, ssize_t high, size_t size);
 void quicksort(int *array, ssize_t low, ssize_t high, size_t size);
-
-/* Additional prototypes for Cocktail Sort */
 void swap_nodes(listint_t **list, listint_t *a, listint_t *b);
-
-/* Additional prototypes for Merge Sort */
 void merge_subarr(int *subarr, int *buff, size_t front, size_t mid, size_t back);
 void merge_sort_recursive(int *subarr, int *buff, size_t front, size_t back);
-
-/* Additional prototypes for Heap Sort */
 void heap_sort(int *array, size_t size);
 void swap_ints(int *a, int *b);
 void max_heapify(int *array, size_t size, size_t base, size_t root);
